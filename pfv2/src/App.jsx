@@ -1,35 +1,38 @@
-import { Routes, Route, useLocation } from "react-router-dom"
-import { useEffect } from "react"
-import Home from "./pages/home/Home"
-import About from "./pages/about/About"
-import Projects from "./pages/projects/Projects"
-import Hobbies from "./pages/hobbies/Hobbies"
-import Contact from "./pages/contact/Contact"
+import { useState } from "react"
+import "./index.css"
 
+import SectionPresentation from "./components/SectionPresentation/SectionPresentation"
+import SectionAbout from "./components/SectionAbout/SectionAbout"
+import SectionProjects from "./components/SectionProjects/SectionProjects"
+import SectionContact from "./components/SectionContact/SectionContact"
+import SectionPhoto from "./components/SectionPhoto/SectionPhoto"
 
 function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    const classes = {
-      "/": "home-body",
-      "/about": "about-body",
-      "/projects": "projects-body",
-      "/hobbies": "hobbies-body",
-      "/contact": "contact-body",
-    };
-    document.body.className = classes[location.pathname] || "";
-  }, [location]);
+  const [activeSection, setActiveSection] = useState(null);
 
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/hobbies" element={<Hobbies />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-  );
+        <main className="flex min-h-screen bg-[#111] text-white overflow-hidden">
+            <SectionPhoto className="w-1/3 hidden lg:flex" />
+            <section className="w-2/3 grid grid-cols-2 grid-rows-2 h-screen">
+                <SectionPresentation
+                    active={activeSection}
+                    setActive={setActiveSection}
+                />
+                <SectionAbout
+                    active={activeSection}
+                    setActive={setActiveSection}
+                />
+                <SectionProjects
+                    active={activeSection}
+                    setActive={setActiveSection}
+                />
+                <SectionContact
+                    active={activeSection}
+                    setActive={setActiveSection}
+                />
+            </section>
+        </main>
+    );
 }
 
 export default App

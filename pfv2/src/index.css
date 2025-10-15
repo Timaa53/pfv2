@@ -2,17 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === Styles globaux === */
-html, body {
+body, #root {
   height: 100%;
-}
-
-/* === Conteneur principal React === */
-#root {
-  @apply min-h-screen w-full flex justify-center bg-yellow-400;
-}
-
-/* === Zone interne optionnelle (centrée et limitée) === */
-#root > * {
-  @apply w-full max-w-full md:max-w-[768px] lg:max-w-[1024px] bg-white p-4;
+  background-color: #111;
+  color: #fff;
+  overflow: hidden;
 }
