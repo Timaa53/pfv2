@@ -1,9 +1,10 @@
+import Typewriter from "typewriter-effect"
 
 function SectionPresentation() {
     return (
         <section
             id="presentation"
-            className="relative aspect-square flex flex-col items-center justify-center gap-2 bg-[#111] p-6 text-center select-none"
+            className="w-full h-full relative aspect-square flex flex-col items-center justify-center gap-2 bg-[#222] p-6 text-center select-none"
         >
             <p className="text-xs md:text-sm font-light tracking-wider text-gray-400 uppercase">
             Hello, World! I'm
@@ -14,7 +15,20 @@ function SectionPresentation() {
             </h2>
 
             <h3 className="text-xs md:text-sm font-semibold text-gray-300 uppercase">
-                Etudiant EPITECH Rennes - Pré MSC
+                <Typewriter
+                    options={{
+                        strings: [
+                            "Étudiant Epitech Rennes",
+                            "Pré Master Of Science",
+                            "Développeur web"
+                        ],
+                        autoStart: true,
+                        loop: true,
+                        delay: 75,
+                        deleteSpeed: 50,
+                        cursor: "",
+                    }}
+                />
             </h3>
         </section>
     );

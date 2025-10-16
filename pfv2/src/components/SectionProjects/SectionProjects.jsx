@@ -1,6 +1,6 @@
 function SectionProjects() {
   return (
-    <section className="group relative aspect-square flex items-center justify-center bg-[#181818] cursor-pointer select-none">
+    <section className="w-full h-full group relative aspect-square flex items-center justify-center bg-[#222] cursor-pointer select-none">
       <div className="flex items-end gap-3 font-bold text-2xl md:text-3xl uppercase leading-none">
         <div className="relative inline-block h-[1.1em] overflow-hidden">
           <span className="invisible block">MES</span>

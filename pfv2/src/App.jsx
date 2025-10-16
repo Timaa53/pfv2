@@ -13,7 +13,7 @@ function App() {
   return (
         <main className="flex min-h-screen bg-[#111] text-white overflow-hidden">
             <SectionPhoto className="w-1/3 hidden lg:flex" />
-            <section className="w-2/3 grid grid-cols-2 grid-rows-2 h-screen">
+            <section className="w-2/3 grid grid-cols-2 grid-rows-2 h-screen gap-5 p-5">
                 <SectionPresentation
                     active={activeSection}
                     setActive={setActiveSection}
