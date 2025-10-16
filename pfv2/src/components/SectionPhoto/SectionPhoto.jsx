@@ -17,7 +17,7 @@ function SectionPhoto({ className = "" }) {
             {/* Texte ou logo optionnel */}
             <div className="relative z-10 text-center">
                 <p className="text-[#daa520] font-semibold tracking-wider">
-                    Portfolio
+                    Photo à mettre ici !
                 </p>
             </div>
         </section>
