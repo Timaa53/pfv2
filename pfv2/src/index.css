@@ -8,3 +8,22 @@ body, #root {
   color: #fff;
   overflow: hidden;
 }
+
+@keyframes pulse-once {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-once {
+  animation: pulse-once 0.4s ease-out forwards;
+}

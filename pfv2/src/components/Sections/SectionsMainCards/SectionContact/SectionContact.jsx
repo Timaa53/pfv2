@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react"
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCar, FaGithub } from "react-icons/fa"
+import Typewriter from "typewriter-effect"
 import ContactItem from "./SectionContactItem"
 
 
@@ -7,6 +8,12 @@ function SectionContact({ className = "", active, setActive, expanded = false })
   if (expanded) {
     return (
       <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
+        <button
+            className="absolute top-5 left-5 bg-[#daa520] text-black font-bold py-2 px-6 rounded hover:bg-[#e1b94c] transition-colors"
+            onClick={() => setActive(null)}
+          >
+            Retour
+          </button>
         <header className="mb-6 w-full flex flex-col pt-3">
           <div className="flex items-end justify-center gap-3 font-bold text-4xl md:text-5xl uppercase leading-none">
             <span className="text-white">FAISONS</span>
@@ -14,44 +21,68 @@ function SectionContact({ className = "", active, setActive, expanded = false })
           </div>
           <div className="border-and-icon pt-3">
             <div className="flex items-center justify-center gap-4 mt-4">
-            <div className="flex-1 h-px bg-gray-500 max-w-[100px]" />
-            <Mail className="w-8 h-8 text-[#daa520]" strokeWidth={2} />
-            <div className="flex-1 h-px bg-gray-500 max-w-[100px]" />
-          </div>
+              <div className="flex-1 h-px bg-gray-500 max-w-[250px]" />
+              <Mail className="w-8 h-8 text-[#daa520]" strokeWidth={2} />
+              <div className="flex-1 h-px bg-gray-500 max-w-[250px]" />
+            </div>
           </div>
         </header>
-        <main className="flex flex-col items-center justify-center gap-6 text-[#daa520] text-sm w-full">
-          <div className="flex flex-col items-start gap-4">
-            <ContactItem icon={FaPhoneAlt} label="Téléphone" content="06 77 15 99 89" />
-            <ContactItem icon={FaEnvelope} label="Email" content="cortinandy@gmail.com" />
+        <main className="flex flex-col items-center justify-center gap-6 text-sm w-full">
+          <div className="flex flex-col items-start gap-8">
+            <ContactItem 
+              icon={FaPhoneAlt}
+              label="Téléphone"
+              typeString = "06 77 15 99 89"
+            />
+            <ContactItem
+              icon={FaEnvelope}
+              label="Email"
+              typeString = "cortinandy@gmail.com"
+            />
             <ContactItem
               icon={FaLinkedin}
               label="LinkedIn"
-              content="linkedin.com/in/cortinandy"
+              typeString = "LinkedIn.fr"
               isLink
-              href="https://linkedin.com/in/cortinandy"
+              href="https://linkedin.com"
             />
-            <ContactItem icon={FaMapMarkerAlt} label="Localisation" content="Mayenne, France" />
-            <ContactItem icon={FaCar} label="Mobilité" content="Bretagne / Pays de la Loire" />
+            <ContactItem
+              icon={FaMapMarkerAlt}
+              label="Localisation"
+              typeString = "Mayenne, France"
+            />
+            <ContactItem
+              icon={FaCar}
+              label="Mobilité"
+              typeString = "Bretagne, Pays De la Loire"
+            />
             <ContactItem
               icon={FaGithub}
               label="GitHub"
-              content="github.com/AndyCortin"
+              typeString = "Github.com"
               isLink
-              href="https://github.com/AndyCortin"
+              href="https://github.com"
             />
           </div>
         </main>
         <footer className="flex justify-center items-center gap-6 mt-6">
-          <p className="max-w-2xl text-gray-300 mb-8">
-            footer éventuel
+          <p className="max-w-2xl text-white-700 mb-8">
+            <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                    .typeString("En espérant vous rencontrer très prochainement, merci d'avoir pris le temps de consulter ma candidature.")
+                    .pauseFor(9999999)
+                    .start();
+                  }}
+                  options={{
+                    autoStart: true,
+                    loop: false,
+                    delay: 50,
+                    deleteSpeed: 50,
+                    cursor: "",
+                  }}
+                />
           </p>
-          <button
-            className="bg-[#daa520] text-black font-bold py-2 px-6 rounded"
-            onClick={() => setActive(null)}
-          >
-            Retour
-          </button>
         </footer>
       </section>
     );
