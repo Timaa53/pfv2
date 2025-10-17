@@ -1,12 +1,12 @@
 import Typewriter from "typewriter-effect"
 
-function SectionPresentation() {
+function SectionPresentation({ className = "" }) {
     return (
         <section
             id="presentation"
-            className="w-full h-full relative aspect-square flex flex-col items-center justify-center gap-2 bg-[#222] p-6 text-center select-none"
+            className={`${className} w-full flex flex-col items-center justify-center gap-2 p-6 text-center select-none`}
         >
-            <p className="text-xs md:text-sm font-light tracking-wider text-gray-400 uppercase">
+            <p className="text-xs md:text-sm font-light tracking-wider text-white-400 uppercase">
             Hello, World! I'm
             </p>
 
@@ -14,7 +14,7 @@ function SectionPresentation() {
                 Andy Cortin
             </h2>
 
-            <h3 className="text-xs md:text-sm font-semibold text-gray-300 uppercase">
+            <h3 className="text-xs md:text-sm font-semibold text-white-300 uppercase">
                 <Typewriter
                     options={{
                         strings: [
