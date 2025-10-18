@@ -1,17 +1,17 @@
+import ButtonBack from "../../../ButtonBack/ButtonBack"
+import { FolderGit2 } from "lucide-react"
+import Typewriter from "typewriter-effect"
+import SectionsHeader from "../../SectionsHeader/SectionsHeader"
+
 function SectionProjects({ className = "", active, setActive, expanded = false }) {
   if (expanded) {
     return (
-      <section className="w-full h-full bg-[#222] flex flex-col items-center justify-center p-10 text-center">
-        <h1 className="text-4xl text-[#daa520] mb-6">À propos de moi</h1>
-        <p className="max-w-2xl text-gray-300 mb-8">
-          Ton texte détaillé ici...
-        </p>
-        <button
-          className="bg-[#daa520] text-black font-bold py-2 px-6 rounded"
-          onClick={() => setActive(null)}
-        >
-          Retour
-        </button>
+      <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
+        <ButtonBack setActive={setActive} />
+        <SectionsHeader title="MES" title2="PROJETS" Icon={FolderGit2} />
+        <main className="flex flex-col justify-center gap-6 text-sm w-full">
+          
+        </main>
       </section>
     );
   }

@@ -1,65 +1,50 @@
 import { Mail } from "lucide-react"
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCar, FaGithub } from "react-icons/fa"
 import Typewriter from "typewriter-effect"
-import ContactItem from "./SectionContactItem"
+import ContactItem from "./SectionContactItems"
+import SectionsHeader from "../../SectionsHeader/SectionsHeader"
+import ButtonBack from "../../../ButtonBack/ButtonBack"
 
 
 function SectionContact({ className = "", active, setActive, expanded = false }) {
   if (expanded) {
     return (
       <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
-        <button
-            className="absolute top-5 left-5 bg-[#daa520] text-black font-bold py-2 px-6 rounded hover:bg-[#e1b94c] transition-colors"
-            onClick={() => setActive(null)}
-          >
-            Retour
-          </button>
-        <header className="mb-6 w-full flex flex-col pt-3">
-          <div className="flex items-end justify-center gap-3 font-bold text-4xl md:text-5xl uppercase leading-none">
-            <span className="text-white">FAISONS</span>
-            <span className="text-[#daa520]">ÉQUIPE</span>
-          </div>
-          <div className="border-and-icon pt-3">
-            <div className="flex items-center justify-center gap-4 mt-4">
-              <div className="flex-1 h-px bg-gray-500 max-w-[250px]" />
-              <Mail className="w-8 h-8 text-[#daa520]" strokeWidth={2} />
-              <div className="flex-1 h-px bg-gray-500 max-w-[250px]" />
-            </div>
-          </div>
-        </header>
-        <main className="flex flex-col items-center justify-center gap-6 text-sm w-full">
+        <ButtonBack setActive={setActive} />
+        <SectionsHeader title="FAISONS" title2="ÉQUIPE" Icon={Mail} />
+        <main className="flex flex-col justify-center gap-6 text-sm w-full">
           <div className="flex flex-col items-start gap-8">
             <ContactItem 
               icon={FaPhoneAlt}
               label="Téléphone"
-              typeString = "06 77 15 99 89"
+              typeString= "06 77 15 99 89"
             />
             <ContactItem
               icon={FaEnvelope}
               label="Email"
-              typeString = "cortinandy@gmail.com"
+              typeString= "cortinandy@gmail.com"
             />
             <ContactItem
               icon={FaLinkedin}
               label="LinkedIn"
-              typeString = "LinkedIn.fr"
+              typeString= "LinkedIn.fr"
               isLink
               href="https://linkedin.com"
             />
             <ContactItem
               icon={FaMapMarkerAlt}
               label="Localisation"
-              typeString = "Mayenne, France"
+              typeString= "Mayenne, France"
             />
             <ContactItem
               icon={FaCar}
               label="Mobilité"
-              typeString = "Bretagne, Pays De la Loire"
+              typeString= "Bretagne, Pays De la Loire"
             />
             <ContactItem
               icon={FaGithub}
               label="GitHub"
-              typeString = "Github.com"
+              typeString= "Github.com"
               isLink
               href="https://github.com"
             />

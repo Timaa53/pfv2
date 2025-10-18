@@ -12,7 +12,8 @@ function ContactItem({ icon: Icon, label, typeString, isLink = false, href }) {
   };
 
   return (
-    <button
+    <div>
+        <button
       onClick={handleClick}
       className="relative flex items-center gap-3 hover:text-white transition-colors duration-200"
       aria-expanded={open}
@@ -72,6 +73,7 @@ function ContactItem({ icon: Icon, label, typeString, isLink = false, href }) {
         )
       )}
     </button>
+    </div>
   );
 }
 
