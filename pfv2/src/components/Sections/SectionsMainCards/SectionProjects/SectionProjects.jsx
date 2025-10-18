@@ -1,5 +1,5 @@
 import ButtonBack from "../../../ButtonBack/ButtonBack"
-import { FolderGit2 } from "lucide-react"
+import { FaFolderOpen  } from "react-icons/fa"
 import Typewriter from "typewriter-effect"
 import SectionsHeader from "../../SectionsHeader/SectionsHeader"
 
@@ -8,8 +8,8 @@ function SectionProjects({ className = "", active, setActive, expanded = false }
     return (
       <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
         <ButtonBack setActive={setActive} />
-        <SectionsHeader title="MES" title2="PROJETS" Icon={FolderGit2} />
-        <main className="flex flex-col justify-center gap-6 text-sm w-full">
+        <SectionsHeader title="MES" title2="PROJETS" Icon={FaFolderOpen  } />
+        <main className="flex flex-col justify-center gap-6 text-sm w-full h-full">
           
         </main>
       </section>
@@ -17,7 +17,7 @@ function SectionProjects({ className = "", active, setActive, expanded = false }
   }
 
   return (
-    <section onClick={() => setActive("contact")} className={`${className} w-full group flex items-center justify-center bg-[#222] cursor-pointer select-none`}>
+    <section onClick={() => setActive("projects")} className={`${className} w-full group flex items-center justify-center bg-[#222] cursor-pointer select-none`}>
       <div className="flex items-end gap-3 font-bold text-2xl md:text-3xl uppercase leading-none">
         <div className="relative inline-block h-[1.1em] overflow-hidden">
           <span className="invisible block">MES</span>
