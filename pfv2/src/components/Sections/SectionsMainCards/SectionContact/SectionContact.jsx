@@ -55,7 +55,7 @@ function SectionContact({ className = "", active, setActive, expanded = false })
             <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                    .typeString("En espérant vous rencontrer très prochainement, merci d'avoir pris le temps de consulter ma candidature.")
+                    .typeString("En espérant vous rencontrer très prochainement, merci d'avoir pris le temps de consulter mon portfolio.")
                     .pauseFor(9999999)
                     .start();
                   }}
