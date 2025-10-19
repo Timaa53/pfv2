@@ -27,3 +27,99 @@ body, #root {
 .animate-pulse-once {
   animation: pulse-once 0.4s ease-out forwards;
 }
+
+/* Effet directionnel */
+.filter-visible {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  opacity: 0.95;
+}
+
+/* Entrée souris */
+.from-top {
+  animation-name: go-down;
+}
+.from-bottom {
+  animation-name: go-up;
+}
+.from-left {
+  animation-name: go-right;
+}
+.from-right {
+  animation-name: go-left;
+}
+
+/* Sortie souris */
+.leaving-from-top {
+  animation-name: reverse-go-down;
+}
+.leaving-from-bottom {
+  animation-name: reverse-go-up;
+}
+.leaving-from-left {
+  animation-name: reverse-go-right;
+}
+.leaving-from-right {
+  animation-name: reverse-go-left;
+}
+
+/* Keyframes entrées */
+@keyframes go-down {
+  0% { bottom: 100%; }
+  100% { bottom: 0; }
+}
+
+@keyframes go-up {
+  0% { top: 100%; }
+  100% { top: 0; }
+}
+
+@keyframes go-left {
+  0% { left: 100%; }
+  100% { left: 0; }
+}
+
+@keyframes go-right {
+  0% { right: 100%; }
+  100% { right: 0; }
+}
+
+/* Keyframes sorties */
+@keyframes reverse-go-down {
+  0% { bottom: 0; }
+  100% { bottom: 100%; }
+}
+
+@keyframes reverse-go-up {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes reverse-go-left {
+  0% { left: 0; }
+  100% { left: 100%; }
+}
+
+@keyframes reverse-go-right {
+  0% { right: 0; }
+  100% { right: 100%; }
+}
+
+/* état avant hover */
+.overlay-initial {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* overlay visible pendant anim/hover */
+.from-top,
+.from-bottom,
+.from-left,
+.from-right,
+.leaving-from-top,
+.leaving-from-bottom,
+.leaving-from-left,
+.leaving-from-right {
+  visibility: visible;
+}
