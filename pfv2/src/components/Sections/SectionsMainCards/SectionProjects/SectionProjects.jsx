@@ -10,7 +10,7 @@ function SectionProjects({ className = "", active, setActive, expanded = false }
       <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
         <ButtonBack setActive={setActive} />
         <SectionsHeader title="MES" title2="PROJETS" Icon={FaFolderOpen  } />
-        <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm w-full h-full">
+        <main className="grid grid-cols-3 md:grid-col-3 grid-rows-2 auto-rows-[1fr] gap-4 w-full h-full">
             <SectionProjectsImages />
         </main>
       </section>

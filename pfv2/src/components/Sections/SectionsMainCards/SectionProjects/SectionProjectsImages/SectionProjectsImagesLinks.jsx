@@ -48,7 +48,7 @@ function SectionProjectsImagesLinks({ link, src, alt = "Image", rounded = "" }) 
         "sophie-bluel": "Développement d'une page web dynamique pour une architecte d'intérieur. Le site permet d'afficher et gérer une galerie de projets avec intéraction d'une API.",
         "nina-carducci": "Optimisation complète des performances, de l'accessibilité et du référencement d'un site de photographe professionnel. Analyses et rapport techniques d'audits, débogage et optimisation du code pour une expérience utilisateur fluide, et SEO friendly.",
         kasa: "Développement complet d'une application de location immobilière. Création et organisation de composants modulaires et réutilisables. Gestion du routage et intégration d'animations pour une expérience utilisateur moderne, et responsive.",
-        "mon-vieux-grimoire": "Développement dun back-end d'un site de notation de livres avec Node.js, Express et MongoDB. Développement d'une API RESTful sécurisée, et traitement des images avec Multer.",
+        "mon-vieux-grimoire": "Développement du back-end d'un site de notation de livres avec Node.js, Express et MongoDB. Développement d'une API RESTful sécurisée, et traitement des images avec Multer.",
   }
 
     // Overlay directionnel
@@ -92,7 +92,7 @@ function SectionProjectsImagesLinks({ link, src, alt = "Image", rounded = "" }) 
       <div
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
-        className={`relative h-full w-full aspect-square cursor-pointer overflow-hidden bg-cover bg-left-top ${rounded}`}
+        className={`relative w-full h-full cursor-pointer overflow-hidden bg-cover bg-[left_top] ${rounded}`}
         style={{ backgroundImage: `url(${src})` }}
       >
         {/* overlay */}
