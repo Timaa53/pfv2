@@ -6,13 +6,19 @@ import SectionsHeader from "../../SectionsHeader/SectionsHeader"
 function SectionAbout({ className = "", active, setActive, expanded = false }) {
   if (expanded) {
     return (
-      <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
-        <ButtonBack setActive={setActive} />
-        <SectionsHeader title="ME" title2="DÉCOUVRIR" Icon={Sparkles} />
-        <main className="flex flex-col justify-center gap-6 text-sm w-full">
-          
-        </main>
-      </section>
+        <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center">
+            <ButtonBack setActive={setActive} />
+            <SectionsHeader title="ME" title2="DÉCOUVRIR" Icon={Sparkles} />
+            <main className="flex flex-col justify-center gap-6 text-sm w-full">
+                <div className="flex px-6 sm:px-12 gap-12">
+                    <div className="flex flex-col flex-grow relative">
+                        <article className="article-content"></article>
+                        <article className="article-content"></article>
+                        <article className="article-content"></article>
+                    </div>
+                </div>
+            </main>
+        </section>
     );
   }
 
