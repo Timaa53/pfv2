@@ -3,35 +3,74 @@ import { Briefcase, GraduationCap, Star, Heart, Sparkles } from "lucide-react"
 import ButtonBack from "../../../ButtonBack/ButtonBack"
 import SectionsHeader from "../../SectionsHeader/SectionsHeader"
 
-function SectionAbout({ className = "", active, setActive, expanded = false }) {
-    const initialCards = [
-        {
-          id: "pro",
-          title: "PARCOURS PROFESSIONNEL",
-          Icon: Briefcase,
-          content: "Expérience pro : stages, alternances, projets pros, etc."
-        },
-        {
-          id: "school",
-          title: "PARCOURS SCOLAIRE",
-          Icon: GraduationCap,
-          content: "Formations, diplômes et certifications ici."
-        },
-        {
-          id: "skills",
-          title: "COMPÉTENCES ACQUISES",
-          Icon: Star,
-          content: "Stacks, outils, langages, frameworks, soft skills..."
-        },
-        {
-          id: "passions",
-          title: "MES PASSIONS",
-          Icon: Heart,
-          content: "Projets personnels, centres d'intérêt, etc."
-        },
-    ]
+import image from "../../../../assets/images/aboutPassionsImages/astronomie.jpg"
 
-    const [cardsOrder, setCardsOrder] = useState(initialCards)
+function SectionAbout({ className = "", active, setActive, expanded = false }) {
+    const [cardsOrder, setCardsOrder] = useState([
+        {
+            id: "pro",
+            title: "PARCOURS PROFESSIONNEL",
+            Icon: Briefcase,
+            content: (
+                <p>
+                    Expériences professionnelles : stages, alternances, projets concrets...
+                </p>
+            ),
+        },
+        {
+            id: "school",
+            title: "PARCOURS SCOLAIRE",
+            Icon: GraduationCap,
+            content: (
+                <p>
+                    Formations, diplômes et certifications obtenues au fil du parcours.
+                </p>
+            ),
+        },
+        {
+            id: "skills",
+            title: "COMPÉTENCES ACQUISES",
+            Icon: Star,
+            content: (
+                <p>
+                    CompétencesLangages, frameworks, outils, bonnes pratiques, soft skills, etc.
+                </p>
+            ),
+        },
+        {
+            id: "passions",
+            title: "MES PASSIONS",
+            Icon: Heart,
+            content: (
+                <div className="flex flex-col w-full h-full">
+                    <div className="grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
+                        {
+                            [
+                                image,
+                                image,
+                                image,
+                                image,
+                                image,
+                                image,
+                            ].map((src, i) => (
+                                <div
+                                    key={i}
+                                    className="rounded-lg border border-white-700 overflow-hidden flex items-center justify-center w-full h-full"
+                                >
+                                    <img
+                                        src={src}
+                                        alt={`Passion ${i + 1}`}
+                                        className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                                    />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            ),
+        },
+    ])
+
     const [activeCard, setActiveCard] = useState("passions")
 
     if (expanded) {
@@ -44,9 +83,8 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
             setActiveCard(clickedId)
         }
 
-        // Paramètres visuels
         const GAP_Y = 55
-        const insets = [120, 70, 35, 0] // Valeurs position cartes
+        const insets = [120, 70, 35, 0]
 
         return (
             <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center overflow-hidden">
@@ -55,51 +93,48 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
 
                 <main className="flex flex-col justify-center items-center gap-6 text-sm w-full">
                     <div className="relative w-full h-full">
-                    {cardsOrder.map((card, index) => {
-                        const isActive = activeCard === card.id
-                        const zIndex = 10 + index * 10
-                        const offsetY = index * GAP_Y
+                        {cardsOrder.map((card, index) => {
+                            const isActive = activeCard === card.id
+                            const zIndex = 10 + index * 10
+                            const offsetY = index * GAP_Y
+                            const inset = insets[index] ?? 0
 
-                        // Valeurs cartes selon position
-                        const inset = insets[index] ?? 0
-
-                        return (
-                            <article
-                                key={card.id}
-                                onClick={() => handleCardClick(card.id)}
-                                className={`absolute border border-gray-600 transition-all duration-500 rounded-lg overflow-hidden flex flex-col ${
-                                    isActive
-                                    ? "bg-[#111] scale-[1.02] h-[calc(100%-220px)] cursor-default"
-                                    : "bg-[#1a1a1a] opacity-90 hover:opacity-100 h-auto cursor-pointer"
-                                }`}
-
-                                style={{
-                                    zIndex,
-                                    left: inset,
-                                    right: inset,
-                                    transform: `translateY(${offsetY}px)`,
-                                }}
-                            >
-                                {/* En-tête */}
-                                <div className="flex items-center justify-center gap-2 py-4 border-b border-gray-600 text-[#daa520] uppercase tracking-wide shrink-0">
-                                    <card.Icon className="w-5 h-5" />
-                                    <h3 className="text-lg font-semibold">{card.title}</h3>
-                                </div>
-
-                                {/* Contenu */}
-                                <div
-                                    className={`transition-all duration-500 ease-in-out flex-grow ${
-                                        isActive ? "opacity-100 p-6" : "opacity-0 h-0 p-0"
+                            return (
+                                <article
+                                    key={card.id}
+                                    onClick={() => handleCardClick(card.id)}
+                                    className={`absolute border border-gray-600 transition-all duration-500 rounded-lg overflow-hidden flex flex-col ${
+                                        isActive
+                                        ? "bg-[#111] scale-[1.02] h-[calc(100%-220px)] cursor-default"
+                                        : "bg-[#1a1a1a] opacity-90 hover:opacity-100 h-auto cursor-pointer"
                                     }`}
+                                    style={{
+                                        zIndex,
+                                        left: inset,
+                                        right: inset,
+                                        transform: `translateY(${offsetY}px)`,
+                                    }}
                                 >
-                                    <div className="text-white-300 text-left overflow-auto">
-                                        {card.content}
+                                    {/* En-tête */}
+                                    <div className="flex items-center justify-center gap-2 py-4 border-b border-gray-600 text-[#daa520] uppercase tracking-wide shrink-0">
+                                        <card.Icon className="w-5 h-5" />
+                                        <h3 className="text-lg font-semibold">{card.title}</h3>
                                     </div>
-                                </div>
-                            </article>
-                        )
-                    })}
-                    <div className="h-[750px]" />
+
+                                    {/* Contenu */}
+                                    <div
+                                        className={`transition-all duration-500 ease-in-out flex-grow ${
+                                            isActive
+                                            ? "opacity-100 p-6 flex flex-col"
+                                            : "opacity-0 h-0 p-0"
+                                        }`}
+                                    >
+                                        <div className="text-white flex-grow">{card.content}</div>
+                                    </div>
+                                </article>
+                            )
+                        })}
+                        <div className="h-[750px]" />
                     </div>
                 </main>
             </section>
