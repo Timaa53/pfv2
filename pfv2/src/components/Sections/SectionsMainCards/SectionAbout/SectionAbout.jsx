@@ -67,11 +67,12 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
                             <article
                                 key={card.id}
                                 onClick={() => handleCardClick(card.id)}
-                                className={`absolute border border-gray-600 transition-all duration-500 cursor-pointer rounded-lg overflow-hidden flex flex-col ${
+                                className={`absolute border border-gray-600 transition-all duration-500 rounded-lg overflow-hidden flex flex-col ${
                                     isActive
                                     ? "bg-[#111] scale-[1.02] h-[calc(100%-220px)] cursor-default"
-                                    : "bg-[#1a1a1a] opacity-90 hover:opacity-100 h-auto"
+                                    : "bg-[#1a1a1a] opacity-90 hover:opacity-100 h-auto cursor-pointer"
                                 }`}
+
                                 style={{
                                     zIndex,
                                     left: inset,
