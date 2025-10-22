@@ -10,51 +10,120 @@ import ia from "../../../../assets/images/aboutPassionsImages/ia.jpg"
 import jeuxVideos from "../../../../assets/images/aboutPassionsImages/jeuxvideos.jpg"
 import rando from "../../../../assets/images/aboutPassionsImages/montblanc.jpg"
 
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
+
+
 function SectionAbout({ className = "", active, setActive, expanded = false }) {
     const [cardsOrder, setCardsOrder] = useState([
         {
-            id: "pro",
-            title: "PARCOURS PROFESSIONNEL",
-            Icon: Briefcase,
-            content: (
-                <>
-                    <div>
-                        <h5 className="text-[#daa520] text-base">
-                            Expérience 1
-                        </h5>
-                        <p>
-                            Tâches réalisées de l'expérience 1
-                        </p>
-                    </div>
-                    <div>
-                        <h5 className="text-[#daa520] text-base">
-                            Expérience 2
-                        </h5>
-                        <p>
-                            Tâches réalisées de l'expérience 2
-                        </p>
-                    </div>
-                    <div>
-                        <h5 className="text-[#daa520] text-base">
-                            Expérience 3
-                        </h5>
-                        <p>
-                            Tâches réalisées de l'expérience 3
-                        </p>
-                    </div>
-                </>
-            ),
-        },
+  id: "pro",
+  title: "PARCOURS PROFESSIONNEL",
+  Icon: Briefcase,
+  content: (
+    <div className="timeline-wrapper">
+      <VerticalTimeline lineColor="#daa520">
+
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<Briefcase />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2024 — Formation développeur web front-end & Back-end - OPENCLASSROOMS</h3>
+          <p>
+            Formation intensive orientée "projets", d'applications web modernes complet. Apprentissage des technologies mentionnée dans l'onglet "mes projets". Stack préférée actuelle: MongoDB/PostgreSQL, Express & Node.js, React.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<Briefcase />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2023 — Formateur nouveaux embauchés - MACIF</h3>
+          <p>
+            Intégration et accompagnement dans la montée en compétences de nouveaux embauchés. Suivi avec reporting et plans d'actions.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<Briefcase />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2018 — Conseiller commercial en assurances - MACIF</h3>
+          <p>
+            Vente & gestion de contrats d'assurances IARD aux particuliers et professionnels. 
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<Briefcase />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2016 — Conseiller en gestion financière et prévoyance - AXA</h3>
+          <p>
+            Développement, organisation en totale autonomie de mon portefeuille clients. Mise en place de plans/construction d'épargne pour les particuliers, et TNS. Optimisation financière et fiscale des services d'épargne et de prévoyance.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<Briefcase />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2012 — Gestionnaire back-office & SAV - DARTY </h3>
+          <p>
+            Organisation des retours SAV de produits défectueux ou non conformes. Gestion des stocks en magasin, accompagnements clients des solutions de financements proposés.
+          </p>
+        </VerticalTimelineElement>
+      </VerticalTimeline>
+    </div>
+  ),
+},
+
         {
-            id: "school",
-            title: "PARCOURS SCOLAIRE",
-            Icon: GraduationCap,
-            content: (
-                <p>
-                    Formations, diplômes et certifications obtenues au fil du parcours.
-                </p>
-            ),
-        },
+  id: "school",
+  title: "PARCOURS SCOLAIRE",
+  Icon: GraduationCap,
+  content: (
+    <div className="timeline-wrapper">
+      <VerticalTimeline lineColor="#daa520">
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<GraduationCap />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2025 — EPITECH Rennes</h3>
+          <p>
+            Année préparatoire intensive en vue d'un Master of Science, réalisé en alternance.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+          iconStyle={{ background: "#daa520", color: "#111" }}
+          icon={<GraduationCap />}
+        >
+          <h3 className="text-[#daa520] font-semibold">2024 — OPENCLASSROOMS</h3>
+          <p>
+            Développement d'application web, approfondissement des technologies suivantes: React, Node.js, MongoDB, Express, HTML, CSS, SASS, JavaScript, Git, SEO/Accessibilité, Figma.
+            HTML, CSS, JS, React, Node.js, MongoDB, gestion de projets.
+          </p>
+        </VerticalTimelineElement>
+      </VerticalTimeline>
+    </div>
+  ),
+},
+
         {
             id: "skills",
             title: "COMPÉTENCES ACQUISES",
@@ -157,7 +226,7 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
                                     <div
                                         className={`transition-all duration-500 ease-in-out flex-grow ${
                                             isActive
-                                            ? "opacity-100 p-6 flex flex-col"
+                                            ? "opacity-100 p-6 flex flex-col overflow-y-auto"
                                             : "opacity-0 h-0 p-0"
                                         }`}
                                     >
