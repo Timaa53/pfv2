@@ -1,4 +1,4 @@
-import Photo from "../../../../assets/images/andy.jpg"
+import Photo from "../../../../assets/images/photoperso3.jpg"
 
 function SectionPhoto({ className = "" }) {
     return (
@@ -7,7 +7,7 @@ function SectionPhoto({ className = "" }) {
             className={`${className} relative flex items-center justify-center overflow-hidden`}
         >
             <img
-        src="https://placehold.co/600x400?text=photo"
+        src={Photo}
         alt="Photo d'Andy Cortin"
         className="w-full h-full object-cover"
       />

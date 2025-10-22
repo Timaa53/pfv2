@@ -13,6 +13,10 @@ import rando from "../../../../assets/images/aboutPassionsImages/montblanc.jpg"
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 
+import SkillsGrid from "./SkillsGrid"
+import SoftSkills from "./SoftSkills"
+
+
 
 function SectionAbout({ className = "", active, setActive, expanded = false }) {
     const [cardsOrder, setCardsOrder] = useState([
@@ -125,15 +129,28 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
 },
 
         {
-            id: "skills",
-            title: "COMPÉTENCES ACQUISES",
-            Icon: Star,
-            content: (
-                <p>
-                    CompétencesLangages, frameworks, outils, bonnes pratiques, soft skills, etc.
-                </p>
-            ),
-        },
+  id: "skills",
+  title: "COMPÉTENCES ACQUISES",
+  Icon: Star,
+  content: (
+    <div className="flex flex-col lg:flex-row justify-between items-stretch h-full flex-1">
+      {/* Bloc gauche : savoir / savoir-être */}
+      <div className="flex-1 flex flex-col h-full">
+        <SoftSkills />
+      </div>
+
+      {/* Ligne de séparation verticale */}
+      <div className="hidden lg:block w-[1px] bg-[#daa520]/40 mx-6 h-full rounded" />
+
+      {/* Bloc droit : savoir-faire */}
+      <div className="flex-1 flex justify-center items-center h-full">
+        <SkillsGrid />
+      </div>
+    </div>
+  ),
+},
+
+
         {
   id: "passions",
   title: "MES PASSIONS",
@@ -260,12 +277,12 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
                 </div>
 
                 <div className="relative inline-block h-[1.1em] overflow-hidden">
-                    <span className="invisible block">DÉCOUVRIR</span>
+                    <span className="invisible block">DECOUVRIR</span>
                     <span className="absolute inset-0 flex items-center justify-center text-[#daa520] transition-all duration-300 ease-in-out group-hover:translate-y-full">
-                        DÉCOUVRIR
+                        DECOUVRIR
                     </span>
                     <span className="absolute inset-0 flex items-center justify-center text-white transition-all duration-300 ease-in-out -translate-y-full group-hover:translate-y-0">
-                        DÉCOUVRIR
+                        DECOUVRIR
                     </span>
                 </div>
             </div>
