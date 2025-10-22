@@ -17,9 +17,32 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
             title: "PARCOURS PROFESSIONNEL",
             Icon: Briefcase,
             content: (
-                <p>
-                    Expériences professionnelles : stages, alternances, projets concrets...
-                </p>
+                <>
+                    <div>
+                        <h5 className="text-[#daa520] text-base">
+                            Expérience 1
+                        </h5>
+                        <p>
+                            Tâches réalisées de l'expérience 1
+                        </p>
+                    </div>
+                    <div>
+                        <h5 className="text-[#daa520] text-base">
+                            Expérience 2
+                        </h5>
+                        <p>
+                            Tâches réalisées de l'expérience 2
+                        </p>
+                    </div>
+                    <div>
+                        <h5 className="text-[#daa520] text-base">
+                            Expérience 3
+                        </h5>
+                        <p>
+                            Tâches réalisées de l'expérience 3
+                        </p>
+                    </div>
+                </>
             ),
         },
         {
@@ -43,27 +66,23 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
             ),
         },
         {
-            id: "passions",
-            title: "MES PASSIONS",
-            Icon: Heart,
-            content: (
-  <div className="flex flex-col w-full h-full">
-    <div className="grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
-
-      {(() => {
-        const passions = [
+  id: "passions",
+  title: "MES PASSIONS",
+  Icon: Heart,
+  content: (
+    <div className="flex flex-col w-full h-full">
+      <div className="flex-1 grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
+        {[
           { src: astronomie, title: "Astronomie" },
           { src: musique, title: "Musique" },
           { src: sports, title: "Sports" },
           { src: ia, title: "IA" },
           { src: jeuxVideos, title: "Jeux Vidéos" },
           { src: rando, title: "Randonnée Mont Blanc 2029" },
-        ]
-
-        return passions.map((item, i) => (
+        ].map((item, i) => (
           <div
             key={i}
-            className="relative rounded-lg overflow-hidden flex items-center justify-center w-full h-full group"
+            className="relative rounded-lg overflow-hidden flex items-center justify-center w-[90%] h-[90%] aspect-[3/2] max-h-[120px] group"
           >
             <img
               src={item.src}
@@ -71,19 +90,17 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-              <h3 className="text-white text-lg font-semibold uppercase tracking-wide drop-shadow-lg text-center transition-colors duration-300 group-hover:text-[#daa520]">
+              <h3 className="text-white text-sm font-semibold uppercase tracking-wide drop-shadow-lg text-center transition-colors duration-300 group-hover:text-[#daa520]">
                 {item.title}
               </h3>
             </div>
           </div>
-        ))
-      })()}
-
+        ))}
+      </div>
     </div>
-  </div>
-)
+  ),
+},
 
-        },
     ])
 
     const [activeCard, setActiveCard] = useState("passions")

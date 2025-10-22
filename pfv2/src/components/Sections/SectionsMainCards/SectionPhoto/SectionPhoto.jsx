@@ -7,7 +7,7 @@ function SectionPhoto({ className = "" }) {
             className={`${className} relative flex items-center justify-center overflow-hidden`}
         >
             <img
-        src={Photo}
+        src="https://placehold.co/600x400?text=photo"
         alt="Photo d'Andy Cortin"
         className="w-full h-full object-cover"
       />
