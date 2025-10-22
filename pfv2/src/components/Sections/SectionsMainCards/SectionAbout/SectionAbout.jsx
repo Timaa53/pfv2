@@ -3,7 +3,12 @@ import { Briefcase, GraduationCap, Star, Heart, Sparkles } from "lucide-react"
 import ButtonBack from "../../../ButtonBack/ButtonBack"
 import SectionsHeader from "../../SectionsHeader/SectionsHeader"
 
-import image from "../../../../assets/images/aboutPassionsImages/astronomie.jpg"
+import astronomie from "../../../../assets/images/aboutPassionsImages/astronomie.jpg"
+import musique from "../../../../assets/images/aboutPassionsImages/music.jpg"
+import sports from "../../../../assets/images/aboutPassionsImages/sports.png"
+import ia from "../../../../assets/images/aboutPassionsImages/ia.jpg"
+import jeuxVideos from "../../../../assets/images/aboutPassionsImages/jeuxvideos.jpg"
+import rando from "../../../../assets/images/aboutPassionsImages/montblanc.jpg"
 
 function SectionAbout({ className = "", active, setActive, expanded = false }) {
     const [cardsOrder, setCardsOrder] = useState([
@@ -42,32 +47,42 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
             title: "MES PASSIONS",
             Icon: Heart,
             content: (
-                <div className="flex flex-col w-full h-full">
-                    <div className="grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
-                        {
-                            [
-                                image,
-                                image,
-                                image,
-                                image,
-                                image,
-                                image,
-                            ].map((src, i) => (
-                                <div
-                                    key={i}
-                                    className="rounded-lg border border-white-700 overflow-hidden flex items-center justify-center w-full h-full"
-                                >
-                                    <img
-                                        src={src}
-                                        alt={`Passion ${i + 1}`}
-                                        className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-                                    />
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            ),
+  <div className="flex flex-col w-full h-full">
+    <div className="grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
+
+      {(() => {
+        const passions = [
+          { src: astronomie, title: "Astronomie" },
+          { src: musique, title: "Musique" },
+          { src: sports, title: "Sports" },
+          { src: ia, title: "IA" },
+          { src: jeuxVideos, title: "Jeux Vidéos" },
+          { src: rando, title: "Randonnée Mont Blanc 2029" },
+        ]
+
+        return passions.map((item, i) => (
+          <div
+            key={i}
+            className="relative rounded-lg overflow-hidden flex items-center justify-center w-full h-full group"
+          >
+            <img
+              src={item.src}
+              alt={item.title}
+              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+              <h3 className="text-white text-lg font-semibold uppercase tracking-wide drop-shadow-lg text-center transition-colors duration-300 group-hover:text-[#daa520]">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        ))
+      })()}
+
+    </div>
+  </div>
+)
+
         },
     ])
 
