@@ -29,7 +29,7 @@ function SectionContact({ className = "", active, setActive, expanded = false })
                             label="LinkedIn"
                             typeString= "Mon LinkedIn"
                             isLink
-                            href="https://www.linkedin.com/in/andycortin"
+                            href="https://www.linkedin.com/in/cortinandy"
                         />
                         <ContactItem
                             icon={FaMapMarkerAlt}
