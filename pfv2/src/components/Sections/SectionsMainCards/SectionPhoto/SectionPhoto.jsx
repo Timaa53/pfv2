@@ -7,10 +7,10 @@ function SectionPhoto({ className = "" }) {
             className={`${className} relative flex items-center justify-center overflow-hidden`}
         >
             <img
-        src={Photo}
-        alt="Photo d'Andy Cortin"
-        className="w-full h-full object-cover"
-      />
+                src={Photo}
+                alt="Photo d'Andy Cortin"
+                className="w-full h-full object-cover"
+            />
         </section>
     );
 }

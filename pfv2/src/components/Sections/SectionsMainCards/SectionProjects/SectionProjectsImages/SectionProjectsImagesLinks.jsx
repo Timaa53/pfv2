@@ -89,45 +89,45 @@ function SectionProjectsImagesLinks({ link, src, alt = "Image", rounded = "" }) 
 
     return (
         <a href={link} target="_blank" rel="noreferrer">
-      <div
-        onMouseEnter={handleEnter}
-        onMouseLeave={handleLeave}
-        className={`relative w-full h-full cursor-pointer overflow-hidden bg-cover bg-[left_top] ${rounded}`}
-        style={{ backgroundImage: `url(${src})` }}
-      >
-        {/* overlay */}
-        <div className={`absolute inset-0 bg-[#daa520] ${overlay}`} />
+            <div
+                onMouseEnter={handleEnter}
+                onMouseLeave={handleLeave}
+                className={`relative w-full h-full cursor-pointer overflow-hidden bg-cover bg-[left_top] ${rounded}`}
+                style={{ backgroundImage: `url(${src})` }}
+            >
+                {/* overlay */}
+                <div className={`absolute inset-0 bg-[#daa520] ${overlay}`} />
 
-        {/* contenu visible au hover */}
-        <div className="absolute inset-0 flex flex-col items-center justify-between text-white opacity-0 hover:opacity-100 transition-opacity duration-300 m-4">
-          <h3 className="text-2xl font-bold">{alt}</h3>
+                {/* contenu visible au hover */}
+                <div className="absolute inset-0 flex flex-col items-center justify-between text-white opacity-0 hover:opacity-100 transition-opacity duration-300 m-4">
+                    <h3 className="text-sm sm:text-lg lg:text-xl font-bold">{alt}</h3>
 
-          {/* description */}
-          {projectDescriptions[altKey] && (
-            <p className="text-sm md:text-base text-white-100 max-w-[80%] leading-snug">
-              {projectDescriptions[altKey]}
-            </p>
-          )}
+                    {/* description */}
+                    {projectDescriptions[altKey] && (
+                        <p className="text-xs sm:text-sm lg:text-[14px] text-white/90 text-center leading-snug">
+                            {projectDescriptions[altKey]}
+                        </p>
+                    )}
 
-          {/* Logos */}
-          {techLogos[altKey] && (
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              {techLogos[altKey].map((logo, i) => (
-                <img
-                  key={i}
-                  src={logo}
-                  alt={`${alt} tech ${i + 1}`}
-                  className="w-6 h-6 md:w-7 md:h-7 object-contain"
-                  loading="lazy"
-                  draggable="false"
-                />
-              ))}
+                    {/* Logos */}
+                    {techLogos[altKey] && (
+                        <div className="flex flex-wrap items-center justify-center gap-2">
+                            {techLogos[altKey].map((logo, i) => (
+                                <img
+                                    key={i}
+                                    src={logo}
+                                    alt={`${alt} tech ${i + 1}`}
+                                    className="w-6 h-6 md:w-7 md:h-7 object-contain"
+                                    loading="lazy"
+                                    draggable="false"
+                                />
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
-          )}
-        </div>
-      </div>
-    </a>
-  )
+        </a>
+    )
 }
 
 export default SectionProjectsImagesLinks

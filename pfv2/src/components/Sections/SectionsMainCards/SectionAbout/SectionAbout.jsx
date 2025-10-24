@@ -1,5 +1,10 @@
 import { useState } from "react"
 import { Briefcase, GraduationCap, Star, Heart, Sparkles } from "lucide-react"
+import SkillsGrid from "./SkillsGrid"
+import SoftSkills from "./SoftSkills"
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
+
 import ButtonBack from "../../../ButtonBack/ButtonBack"
 import SectionsHeader from "../../SectionsHeader/SectionsHeader"
 
@@ -10,183 +15,176 @@ import ia from "../../../../assets/images/aboutPassionsImages/ia.jpg"
 import jeuxVideos from "../../../../assets/images/aboutPassionsImages/jeuxvideos.jpg"
 import rando from "../../../../assets/images/aboutPassionsImages/montblanc.jpg"
 
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
-import "react-vertical-timeline-component/style.min.css"
-
-import SkillsGrid from "./SkillsGrid"
-import SoftSkills from "./SoftSkills"
-
-
-
 function SectionAbout({ className = "", active, setActive, expanded = false }) {
     const [cardsOrder, setCardsOrder] = useState([
         {
-  id: "pro",
-  title: "PARCOURS PROFESSIONNEL",
-  Icon: Briefcase,
-  content: (
-    <div className="timeline-wrapper">
-      <VerticalTimeline lineColor="#daa520">
+            id: "pro",
+            title: "PARCOURS PROFESSIONNEL",
+            Icon: Briefcase,
+            content: (
+                <div className="timeline-wrapper">
+                    <VerticalTimeline lineColor="#daa520">
 
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<Briefcase />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2024 — Formation développeur web front-end & Back-end - OPENCLASSROOMS</h3>
-          <p>
-            Formation intensive orientée "projets", d'applications web modernes complet. Apprentissage des technologies mentionnée dans l'onglet "mes projets". Stack préférée actuelle: MongoDB/PostgreSQL, Express & Node.js, React.
-          </p>
-        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<Briefcase />}
+                        >
+                            <h3 className="text-[#daa520] text-sm sm:text-base lg:text-lg font-semibold leading-snug">
+                                2024 — Formation développeur web front-end & Back-end - OPENCLASSROOMS
+                            </h3>
+                            <p className="text-xs sm:text-sm lg:text-[15px] leading-snug text-gray-300">
+                                Formation intensive orientée "projets", d'applications web modernes complet. Apprentissage des technologies mentionnée dans l'onglet "mes projets". Stack préférée actuelle: MongoDB/PostgreSQL, Express & Node.js, React.
+                            </p>
+                        </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<Briefcase />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2023 — Formateur nouveaux embauchés - MACIF</h3>
-          <p>
-            Intégration et accompagnement dans la montée en compétences de nouveaux embauchés. Suivi avec reporting et plans d'actions.
-          </p>
-        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<Briefcase />}
+                        >
+                            <h3 className="text-[#daa520] font-semibold">
+                                2023 — Formateur nouveaux embauchés - MACIF
+                            </h3>
+                            <p>
+                                Intégration et accompagnement dans la montée en compétences de nouveaux embauchés. Suivi avec reporting et plans d'actions.
+                            </p>
+                        </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<Briefcase />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2018 — Conseiller commercial en assurances - MACIF</h3>
-          <p>
-            Vente & gestion de contrats d'assurances IARD aux particuliers et professionnels. 
-          </p>
-        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<Briefcase />}
+                        >
+                            <h3 className="text-[#daa520] font-semibold">
+                                2018 — Conseiller commercial en assurances - MACIF
+                            </h3>
+                            <p>
+                                Vente & gestion de contrats d'assurances IARD aux particuliers et professionnels. 
+                            </p>
+                        </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<Briefcase />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2016 — Conseiller en gestion financière et prévoyance - AXA</h3>
-          <p>
-            Développement, organisation en totale autonomie de mon portefeuille clients. Mise en place de plans/construction d'épargne pour les particuliers, et TNS. Optimisation financière et fiscale des services d'épargne et de prévoyance.
-          </p>
-        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<Briefcase />}
+                        >
+                            <h3 className="text-[#daa520] font-semibold">2016 — Conseiller en gestion financière et prévoyance - AXA</h3>
+                            <p>
+                                Développement, organisation en totale autonomie de mon portefeuille clients. Mise en place de plans/construction d'épargne pour les particuliers, et TNS. Optimisation financière et fiscale des services d'épargne et de prévoyance.
+                            </p>
+                        </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<Briefcase />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2012 — Gestionnaire back-office & SAV - DARTY </h3>
-          <p>
-            Organisation des retours SAV de produits défectueux ou non conformes. Gestion des stocks en magasin, accompagnements clients des solutions de financements proposés.
-          </p>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
-    </div>
-  ),
-},
-
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<Briefcase />}
+                        >
+                            <h3 className="text-[#daa520] font-semibold">2012 — Gestionnaire back-office & SAV - DARTY </h3>
+                            <p>
+                                Organisation des retours SAV de produits défectueux ou non conformes. Gestion des stocks en magasin, accompagnements clients des solutions de financements proposés.
+                            </p>
+                        </VerticalTimelineElement>
+                    </VerticalTimeline>
+                </div>
+            ),
+        },
         {
-  id: "school",
-  title: "PARCOURS SCOLAIRE",
-  Icon: GraduationCap,
-  content: (
-    <div className="timeline-wrapper">
-      <VerticalTimeline lineColor="#daa520">
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<GraduationCap />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2025 — EPITECH Rennes</h3>
-          <p>
-            Année préparatoire intensive en vue d'un Master of Science, réalisé en alternance.
-          </p>
-        </VerticalTimelineElement>
+            id: "school",
+            title: "PARCOURS SCOLAIRE",
+            Icon: GraduationCap,
+            content: (
+                <div className="timeline-wrapper">
+                    <VerticalTimeline lineColor="#daa520">
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<GraduationCap />}
+                        >
+                            <h3 className="text-[#daa520] font-semibold">2025 — EPITECH Rennes</h3>
+                            <p>
+                                Année préparatoire intensive en vue d'un Master of Science, réalisé en alternance.
+                            </p>
+                        </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          contentStyle={{ background: "#1a1a1a", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid #daa520" }}
-          iconStyle={{ background: "#daa520", color: "#111" }}
-          icon={<GraduationCap />}
-        >
-          <h3 className="text-[#daa520] font-semibold">2024 — OPENCLASSROOMS</h3>
-          <p>
-            Développement d'application web, approfondissement des technologies suivantes: React, Node.js, MongoDB, Express, HTML, CSS, SASS, JavaScript, Git, SEO/Accessibilité, Figma.
-            HTML, CSS, JS, React, Node.js, MongoDB, gestion de projets.
-          </p>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
-    </div>
-  ),
-},
-
+                        <VerticalTimelineElement
+                            contentStyle={{ background: "#1a1a1a", color: "#fff" }}
+                            contentArrowStyle={{ borderRight: "7px solid #daa520" }}
+                            iconStyle={{ background: "#daa520", color: "#111" }}
+                            icon={<GraduationCap />}
+                        >
+                            <h3 className="text-[#daa520] font-semibold">2024 — OPENCLASSROOMS</h3>
+                            <p>
+                                Développement d'application web, approfondissement des technologies suivantes: React, Node.js, MongoDB, Express, HTML, CSS, SASS, JavaScript, Git, SEO/Accessibilité, Figma.
+                                HTML, CSS, JS, React, Node.js, MongoDB, gestion de projets.
+                            </p>
+                        </VerticalTimelineElement>
+                    </VerticalTimeline>
+                </div>
+            ),
+        },
         {
-  id: "skills",
-  title: "COMPÉTENCES ACQUISES",
-  Icon: Star,
-  content: (
-    <div className="flex flex-col lg:flex-row justify-between items-stretch h-full flex-1">
-      {/* Bloc gauche : savoir / savoir-être */}
-      <div className="flex-1 flex flex-col h-full">
-        <SoftSkills />
-      </div>
+            id: "skills",
+            title: "COMPÉTENCES ACQUISES",
+            Icon: Star,
+            content: (
+                <div className="flex flex-col lg:flex-row justify-between items-stretch h-full flex-1">
+                    {/* Bloc gauche : savoir / savoir-être */}
+                    <div className="flex-1 flex flex-col h-full">
+                        <SoftSkills />
+                    </div>
 
-      {/* Ligne de séparation verticale */}
-      <div className="hidden lg:block w-[1px] bg-[#daa520]/40 mx-6 h-full rounded" />
+                    {/* Ligne de séparation verticale */}
+                    <div className="hidden lg:block w-[1px] bg-[#daa520]/40 mx-6 h-full rounded" />
 
-      {/* Bloc droit : savoir-faire */}
-      <div className="flex-1 flex justify-center items-center h-full">
-        <SkillsGrid />
-      </div>
-    </div>
-  ),
-},
-
-
+                    {/* Bloc droit : savoir-faire */}
+                    <div className="flex-1 flex justify-center items-center h-full">
+                        <SkillsGrid />
+                    </div>
+                </div>
+            ),
+        },
         {
-  id: "passions",
-  title: "MES PASSIONS",
-  Icon: Heart,
-  content: (
-    <div className="flex flex-col w-full h-full">
-      <div className="flex-1 grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
-        {[
-          { src: astronomie, title: "Astronomie" },
-          { src: musique, title: "Musique" },
-          { src: sports, title: "Sports" },
-          { src: ia, title: "IA" },
-          { src: jeuxVideos, title: "Jeux Vidéos" },
-          { src: rando, title: "Randonnée Mont Blanc 2029" },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="relative rounded-lg overflow-hidden flex items-center justify-center w-[90%] h-[90%] aspect-[3/2] max-h-[120px] group"
-          >
-            <img
-              src={item.src}
-              alt={item.title}
-              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-              <h3 className="text-white text-sm font-semibold uppercase tracking-wide drop-shadow-lg text-center transition-colors duration-300 group-hover:text-[#daa520]">
-                {item.title}
-              </h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  ),
-},
-
+            id: "passions",
+            title: "MES PASSIONS",
+            Icon: Heart,
+            content: (
+                <div className="flex flex-col w-full h-full">
+                    <div className="flex-1 grid grid-cols-3 grid-rows-2 gap-2 w-full h-full place-items-center">
+                        {[
+                            { src: astronomie, title: "Astronomie" },
+                            { src: musique, title: "Musique" },
+                            { src: sports, title: "Sports" },
+                            { src: ia, title: "IA" },
+                            { src: jeuxVideos, title: "Jeux Vidéos" },
+                            { src: rando, title: "Randonnée Mont Blanc 2029" },
+                        ].map((item, i) => (
+                            <div
+                                key={i}
+                                className="relative rounded-lg overflow-hidden flex items-center justify-center w-[90%] h-[90%] aspect-[3/2] max-h-[120px] group"
+                            >
+                                <img
+                                    src={item.src}
+                                    alt={item.title}
+                                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                                    <h3 className="text-white text-xs sm:text-sm lg:text-base font-semibold uppercase tracking-wide drop-shadow-lg text-center transition-colors duration-300 group-hover:text-[#daa520]">
+                                        {item.title}
+                                    </h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ),
+        },
     ])
 
     const [activeCard, setActiveCard] = useState("passions")
@@ -205,7 +203,7 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
         const insets = [120, 70, 35, 0]
 
         return (
-            <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-10 text-center overflow-hidden">
+            <section className="w-full h-full bg-[#222] flex flex-col items-center justify-between p-4 sm:p-6 lg:p-10 text-center overflow-hidden">
                 <ButtonBack setActive={setActive} />
                 <SectionsHeader title="ME" title2="DÉCOUVRIR" Icon={Sparkles} />
 
@@ -234,9 +232,9 @@ function SectionAbout({ className = "", active, setActive, expanded = false }) {
                                     }}
                                 >
                                     {/* En-tête */}
-                                    <div className="flex items-center justify-center gap-2 py-4 border-b border-gray-600 text-[#daa520] uppercase tracking-wide shrink-0">
+                                    <div className="flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 lg:py-4 border-b border-gray-600 text-[#daa520] uppercase tracking-wide shrink-0">
                                         <card.Icon className="w-5 h-5" />
-                                        <h3 className="text-lg font-semibold">{card.title}</h3>
+                                        <h3 className="text-sm sm:text-base lg:text-lg font-semibold tracking-wide text-center">{card.title}</h3>
                                     </div>
 
                                     {/* Contenu */}
