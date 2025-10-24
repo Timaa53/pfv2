@@ -27,7 +27,7 @@ function SectionContact({ className = "", active, setActive, expanded = false })
                         <ContactItem
                             icon={FaLinkedin}
                             label="LinkedIn"
-                            typeString= "LinkedIn.fr"
+                            typeString= "Mon LinkedIn"
                             isLink
                             href="https://www.linkedin.com/in/andycortin"
                         />
@@ -44,7 +44,7 @@ function SectionContact({ className = "", active, setActive, expanded = false })
                         <ContactItem
                             icon={FaGithub}
                             label="GitHub"
-                            typeString= "Github.com"
+                            typeString= "Mon Github"
                             isLink
                             href="https://github.com/Timaa53"
                         />
