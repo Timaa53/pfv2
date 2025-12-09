@@ -6,14 +6,14 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css"
 
 import ButtonBack from "../../../ButtonBack/ButtonBack"
-import SectionsHeader from "../../sectionsHeader/SectionsHeader"
+import SectionsHeader from "../../SectionsHeader/SectionsHeader"
 
-import astronomie from "../../../../assets/images/aboutPassionsImages/Astronomie.jpg"
-import musique from "../../../../assets/images/aboutPassionsImages/Music.jpg"
-import sports from "../../../../assets/images/aboutPassionsImages/Sports.png"
-import ia from "../../../../assets/images/aboutPassionsImages/Ia.jpg"
-import jeuxVideos from "../../../../assets/images/aboutPassionsImages/JeuxVideos.jpg"
-import rando from "../../../../assets/images/aboutPassionsImages/Montblanc.jpg"
+import astronomie from "../../../../assets/images/aboutPassionsImages/astronomie.jpg"
+import musique from "../../../../assets/images/aboutPassionsImages/music.jpg"
+import sports from "../../../../assets/images/aboutPassionsImages/sports.png"
+import ia from "../../../../assets/images/aboutPassionsImages/ia.jpg"
+import jeuxVideos from "../../../../assets/images/aboutPassionsImages/jeuxvideos.jpg"
+import rando from "../../../../assets/images/aboutPassionsImages/montblanc.jpg"
 
 function SectionAbout({ className = "", active, setActive, expanded = false }) {
     const [cardsOrder, setCardsOrder] = useState([

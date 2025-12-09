@@ -1,9 +1,9 @@
 import SectionProjectsImagesLinks from "./SectionProjectsImagesLinks"
-import booki from "../../../../../assets/images/projectImages/Booki.png"
-import kasa from "../../../../../assets/images/projectImages/Kasa.png"
-import mvg from "../../../../../assets/images/projectImages/Mvg.png"
-import nina from "../../../../../assets/images/projectImages/NinaCarducciPhoto.png"
-import sophie from "../../../../../assets/images/projectImages/SophieBluelArchitecte.png"
+import booki from "../../../../../assets/images/ProjectImages/booki.png"
+import kasa from "../../../../../assets/images/ProjectImages/kasa.png"
+import mvg from "../../../../../assets/images/ProjectImages/mvg.png"
+import nina from "../../../../../assets/images/ProjectImages/ninaCarducciPhoto.png"
+import sophie from "../../../../../assets/images/ProjectImages/sophieBluelArchitecte.png"
 
 function SectionProjectsImages() {
     return(
