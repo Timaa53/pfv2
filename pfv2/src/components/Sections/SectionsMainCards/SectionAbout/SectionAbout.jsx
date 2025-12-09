@@ -5,7 +5,7 @@ import SoftSkills from "./SoftSkills"
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 
-import ButtonBack from "../../../buttonBack/ButtonBack"
+import ButtonBack from "../../../ButtonBack/ButtonBack"
 import SectionsHeader from "../../sectionsHeader/SectionsHeader"
 
 import astronomie from "../../../../assets/images/aboutPassionsImages/Astronomie.jpg"

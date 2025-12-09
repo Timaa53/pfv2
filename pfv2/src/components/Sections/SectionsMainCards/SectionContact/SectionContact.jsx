@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCar, FaGithub } f
 import Typewriter from "typewriter-effect"
 import ContactItem from "./SectionContactItems"
 import SectionsHeader from "../../sectionsHeader/SectionsHeader"
-import ButtonBack from "../../../buttonBack/ButtonBack"
+import ButtonBack from "../../../ButtonBack/ButtonBack"
 
 
 function SectionContact({ className = "", active, setActive, expanded = false }) {
