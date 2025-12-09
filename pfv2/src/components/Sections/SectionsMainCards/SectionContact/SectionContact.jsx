@@ -2,8 +2,8 @@ import { Mail } from "lucide-react"
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCar, FaGithub } from "react-icons/fa"
 import Typewriter from "typewriter-effect"
 import ContactItem from "./SectionContactItems"
-import SectionsHeader from "../../SectionsHeader/SectionsHeader"
-import ButtonBack from "../../../ButtonBack/ButtonBack"
+import SectionsHeader from "../../sectionsHeader/SectionsHeader"
+import ButtonBack from "../../../buttonBack/ButtonBack"
 
 
 function SectionContact({ className = "", active, setActive, expanded = false }) {

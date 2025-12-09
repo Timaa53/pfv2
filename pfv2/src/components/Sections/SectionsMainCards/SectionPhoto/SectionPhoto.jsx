@@ -1,4 +1,4 @@
-import Photo from "../../../../assets/images/photoperso3.jpg"
+import Photo from "../../../../assets/images/mainPhoto/Photoperso3.jpg"
 
 function SectionPhoto({ className = "" }) {
     return (

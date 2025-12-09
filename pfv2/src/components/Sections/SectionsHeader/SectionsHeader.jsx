@@ -1,4 +1,4 @@
-import SectionHeaderIcon from "./SectionHeaderIcon"
+import SectionHeaderIcon from "./sectionHeaderIcon/SectionHeaderIcon"
 
 function SectionHeader ({title, title2, Icon}) {
     return(

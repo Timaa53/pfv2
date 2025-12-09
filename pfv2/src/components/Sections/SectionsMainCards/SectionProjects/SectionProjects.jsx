@@ -1,7 +1,7 @@
-import ButtonBack from "../../../ButtonBack/ButtonBack"
+import ButtonBack from "../../../buttonBack/ButtonBack"
 import { FaFolderOpen  } from "react-icons/fa"
 import Typewriter from "typewriter-effect"
-import SectionsHeader from "../../SectionsHeader/SectionsHeader"
+import SectionsHeader from "../../sectionsHeader/SectionsHeader"
 import SectionProjectsImages from "./SectionProjectsImages/SectionProjectsImages"
 
 function SectionProjects({ className = "", active, setActive, expanded = false }) {
