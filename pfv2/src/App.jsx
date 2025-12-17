@@ -11,11 +11,11 @@ function App() {
     const [activeSection, setActiveSection] = useState(null);
 
     return (
-        <main className="flex min-h-screen bg-[#111] text-white overflow-hidden md:p-5 md:gap-5">
+        <main className="flex h-screen bg-[#111] text-white overflow-hidden md:p-5 md:gap-5">
             <SectionPhoto className="hidden lg:flex w-1/3" />
 
                 {/* MOBILE: colonne unique qui remplit 100% de la hauteur */}
-                <section className="w-full flex flex-col min-h-svh md:grid md:grid-cols-2 md:grid-rows-2 md:gap-5 lg:w-2/3 gap-2 relative">
+                <section className="w-full flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 md:gap-5 lg:w-2/3 gap-2 relative">
                     {!activeSection ? (
                         <>
                             {/* 1/3 de la hauteur totale */}
