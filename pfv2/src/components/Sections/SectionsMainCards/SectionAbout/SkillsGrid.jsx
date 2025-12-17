@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaGitAlt } from "react-icons/fa"
-import { SiMongodb, SiExpress, SiPostgresql, SiTailwindcss, SiVite } from "react-icons/si"
+import { SiMongodb, SiExpress, SiPostgresql, SiTailwindcss, SiVite, SiVuedotjs, SiFastify } from "react-icons/si"
 
 function SkillsGrid() {
     const skills = [
@@ -8,9 +8,11 @@ function SkillsGrid() {
         { icon: <FaCss3Alt />, label: "CSS3 / SCSS" },
         { icon: <FaJs />, label: "JavaScript" },
         { icon: <FaReact />, label: "React / Vite" },
+        { icon: <SiVuedotjs />, label: "Vue.js" },
         { icon: <SiTailwindcss />, label: "Tailwind CSS" },
         { icon: <FaNodeJs />, label: "Node.js" },
         { icon: <SiExpress />, label: "Express" },
+        { icon: <SiFastify />, label: "Fastify" },
         { icon: <SiMongodb />, label: "MongoDB" },
         { icon: <SiPostgresql />, label: "PostgreSQL" },
         { icon: <FaGitAlt />, label: "Git / GitHub" },
