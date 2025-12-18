@@ -41,6 +41,7 @@
         - Nina Carducci: https://nina-carducci-photographer.vercel.app
         - KASA: https://kasa-nine-gamma.vercel.app
         - Mon Vieux Grimoire: https://monvieuxgrimoire53210.vercel.app
+        - Site de recherche d'emploi (projet EPITECH)
 ## **React**: intermédiaire
     - Composants fonctionnels et hooks (useState, useEffect, useContext)
     - Props et state management
@@ -65,7 +66,8 @@
     - Props, emits et communication entre composants
     - Computed properties et watchers
     - Directives Vue (v-if, v-for, v-model, v-bind)
-    - **Projets**: Site d'hébergement/gestion de films
+    - **Projets**: 
+        - Site d'hébergement/gestion de films
 
 # Backend
 
@@ -77,6 +79,9 @@
     - Modules NPM et gestion des dépendances
     - Debugging et error handling
     - **Projets**: 
+        - Site de recherche d'emploi (projet EPITECH)
+        - Mon Vieux Grimoire: https://monvieuxgrimoire53210.vercel.app
+
 ## **Fastify**: intermédiaire
     - Configuration et démarrage de serveurs Fastify
     - Routes et handlers (GET, POST, PUT, DELETE)
@@ -85,6 +90,7 @@
     - Hooks et lifecycle Fastify
     - Performance et optimisation
     - **Projets**: 
+        - Site d'hébergement/gestion de films
 ## **Express**: intermédiaire
     - Configuration et middlewares Express
     - Routing et controllers
@@ -93,6 +99,8 @@
     - CORS et sécurité (helmet, rate limiting)
     - API RESTful et architecture MVC
     - **Projets**: 
+        - Site de recherche d'emploi (projet EPITECH)
+        - Mon Vieux Grimoire: https://monvieuxgrimoire53210.vercel.app
 
 # Base de données
 
@@ -103,6 +111,7 @@
     - Indexation pour l'optimisation des performances
     - Relations entre collections (références, embedded documents)
     - **Projets**: 
+        - Mon Vieux Grimoire: https://monvieuxgrimoire53210.vercel.app
 ## **Postgres**: débutant
     - SQL de base (SELECT, INSERT, UPDATE, DELETE)
     - Création de tables et définition de schémas
@@ -110,6 +119,7 @@
     - Contraintes (PRIMARY KEY, FOREIGN KEY, UNIQUE)
     - Installation et configuration de base
     - **Projets**: 
+        - Site de recherche d'emploi (projet EPITECH) 
 
 # DevOps & outils
 
@@ -120,6 +130,7 @@
     - Volumes et persistance des données
     - Réseaux Docker et communication entre containers
     - **Projets**: 
+        - Projet d'automatisation (projet EPITECH)
 ## **Jenkins**: débutant
     - Configuration de pipelines CI/CD basiques
     - Création de jobs Jenkins
@@ -127,12 +138,13 @@
     - Build automation et déploiement
     - Gestion des credentials et variables d'environnement
     - **Projets**: 
+        - Projet d'automatisation (projet EPITECH)
 ## **Git/GitHub**: avancé
     - Workflow Git (branches, merge, rebase, stash)
     - Résolution de conflits complexes
     - Pull requests et code reviews
     - Gestion de versions et tags
-    - **Projets**: 
+    - **Projets**: tous
 ## **SEO (Search Engine Optimization)**: intermédiaire
     - Optimisation on-page (meta tags, title, description)
     - Structure sémantique HTML pour le référencement
@@ -143,6 +155,7 @@
     - SEO technique (URLs propres, redirections, canoniques)
     - Optimisation des images (alt text, compression, lazy loading)
     - **Projets**: 
+        - Nina Carducci: https://nina-carducci-photographer.vercel.app
 ## **Accessibilité (WCAG)**: intermédiaire
     - Normes WCAG 2.1 (niveaux A, AA)
     - ARIA labels et rôles (landmarks, live regions)
@@ -153,6 +166,7 @@
     - Structure de titres hiérarchique (h1-h6)
     - Tests avec lecteurs d'écran (NVDA, VoiceOver)
     - **Projets**: 
+        - Nina Carducci: https://nina-carducci-photographer.vercel.app
 
 ## **Audit et Performance**: intermédiaire
     - Lighthouse (SEO, Performance, Accessibilité, Best Practices)
@@ -164,6 +178,7 @@
     - Audit de sécurité basique (HTTPS, headers, CORS)
     - Monitoring des Core Web Vitals
     - **Projets**: 
+        - Nina Carducci: https://nina-carducci-photographer.vercel.app
 
 ## Figma
 
@@ -177,6 +192,7 @@
     - Gestion des exceptions (try-catch)
     - JavaFX pour interfaces graphiques basiques
     - **Projets**: 
+        - Jeu de plateforme en 2D (projet EPITECH)
 ## **LUA**: intermédiaire
     - Syntaxe Lua et structures de données (tables)
     - Functions et closures
@@ -185,3 +201,4 @@
     - Intégration Lua dans d'autres applications
     - Scripting pour jeux vidéo et automatisation
     - **Projets**: 
+        - Optimisation du code d'un serveur privé GTA RolePlay
