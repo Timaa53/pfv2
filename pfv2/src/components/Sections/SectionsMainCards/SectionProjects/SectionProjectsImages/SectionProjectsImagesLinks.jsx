@@ -10,6 +10,18 @@ import ExpressLogo from "../../../../../assets/images/LogosTechno/07-express.png
 import RestAPILogo from "../../../../../assets/images/LogosTechno/09-restAPI.png"
 import SassLogo from "../../../../../assets/images/LogosTechno/11-Sass.png"
 import Figma from "../../../../../assets/images/LogosTechno/12-Figma.png"
+import nextJs from "../../../../../assets/images/LogosTechno/NextJs.svg"
+import TypeScript from "../../../../../assets/images/LogosTechno/TypeScript.png"
+import Tailwind from "../../../../../assets/images/LogosTechno/Tailwind.svg"
+import Shadcn from "../../../../../assets/images/LogosTechno/Shadcn.png"
+import FramerMotion from "../../../../../assets/images/LogosTechno/FramerMotion.png"
+import PostgreSQL from "../../../../../assets/images/LogosTechno/PostgreSQL.svg"
+import Neon from "../../../../../assets/images/LogosTechno/Neon.png"
+import Drizzle from "../../../../../assets/images/LogosTechno/Drizzle.png"
+import Zod from "../../../../../assets/images/LogosTechno/Zod.webp"
+import GoogleAPI from "../../../../../assets/images/LogosTechno/GoogleAPI.png"
+import Vercel from "../../../../../assets/images/LogosTechno/Vercel.svg"
+import Resend from "../../../../../assets/images/LogosTechno/Resend.png"
 
 import { useRef, useState } from "react"
 
@@ -40,7 +52,8 @@ function SectionProjectsImagesLinks({ link, src, alt = "Image", rounded = "" }) 
         "sophie-bluel": [JavaScriptLogo, RestAPILogo, HtmlLogo, CssLogo,Figma],
         "nina-carducci": [JavaScriptLogo, SeoLogo, Accessibility],
         kasa: [ReactLogo, NodeJsLogo, JavaScriptLogo, HtmlLogo, CssLogo, SassLogo, Figma],
-        "mon-vieux-grimoire": [ExpressLogo, MongoDBLogo, NodeJsLogo, RestAPILogo, Figma]
+        "mon-vieux-grimoire": [ExpressLogo, MongoDBLogo, NodeJsLogo, RestAPILogo, Figma],
+        cecilianails: [nextJs, TypeScript, NodeJsLogo, Tailwind, Shadcn, FramerMotion, PostgreSQL, Neon, Drizzle, Zod, GoogleAPI, Vercel, Resend]
     }
 
     const projectDescriptions = {
@@ -49,6 +62,7 @@ function SectionProjectsImagesLinks({ link, src, alt = "Image", rounded = "" }) 
         "nina-carducci": "Optimisation complète des performances, de l'accessibilité et du référencement d'un site de photographe professionnel. Analyses et rapport techniques d'audits, débogage et optimisation du code pour une expérience utilisateur fluide, et SEO friendly.",
         kasa: "Développement complet d'une application de location immobilière. Création et organisation de composants modulaires et réutilisables. Gestion du routage et intégration d'animations pour une expérience utilisateur moderne, et responsive.",
         "mon-vieux-grimoire": "Développement du back-end d'un site de notation de livres avec Node.js, Express et MongoDB. Développement d'une API RESTful sécurisée, et traitement des images avec Multer.",
+        cecilianails: "SaaS multi-tenant de réservation en ligne pour les professionnels de la beauté. Chaque salon obtient son propre site vitrine (galerie 3D, avis clients, prestations), un système de réservation intelligent avec gestion des créneaux en temps réel, et un dashboard admin complet (RDV, planning, CA, clients). L'architecture supporte les custom domains, la sync bidirectionnelle Google Calendar, l'authentification Google + credentials avec account linking, et le SEO dynamique par tenant."
   }
 
     // Overlay directionnel
