@@ -28,7 +28,6 @@ body, #root {
   animation: pulse-once 0.4s ease-out forwards;
 }
 
-/* Effet directionnel */
 .filter-visible {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -36,7 +35,6 @@ body, #root {
   opacity: 0.95;
 }
 
-/* Entrée souris */
 .from-top {
   animation-name: go-down;
 }
@@ -50,7 +48,6 @@ body, #root {
   animation-name: go-left;
 }
 
-/* Sortie souris */
 .leaving-from-top {
   animation-name: reverse-go-down;
 }
@@ -64,7 +61,6 @@ body, #root {
   animation-name: reverse-go-left;
 }
 
-/* Keyframes entrées */
 @keyframes go-down {
   0% { bottom: 100%; }
   100% { bottom: 0; }
@@ -85,7 +81,6 @@ body, #root {
   100% { right: 0; }
 }
 
-/* Keyframes sorties */
 @keyframes reverse-go-down {
   0% { bottom: 0; }
   100% { bottom: 100%; }
@@ -106,13 +101,95 @@ body, #root {
   100% { right: 100%; }
 }
 
-/* état avant hover */
+.glass-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(40px) saturate(1.5);
+  -webkit-backdrop-filter: blur(40px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-message {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-bubble {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-bubble:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+
+.animation-delay-150 {
+  animation-delay: 0.15s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .overlay-initial {
   opacity: 0;
   visibility: hidden;
 }
 
-/* overlay visible pendant anim/hover */
 .from-top,
 .from-bottom,
 .from-left,

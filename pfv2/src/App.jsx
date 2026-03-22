@@ -6,11 +6,13 @@ import SectionAbout from "./components/Sections/SectionsMainCards/SectionAbout/S
 import SectionProjects from "./components/Sections/SectionsMainCards/SectionProjects/SectionProjects"
 import SectionContact from "./components/Sections/SectionsMainCards/SectionContact/SectionContact"
 import SectionPhoto from "./components/Sections/SectionsMainCards/SectionPhoto/SectionPhoto"
+import ChatBubble from "./components/ChatBubble/ChatBubble"
 
 function App() {
     const [activeSection, setActiveSection] = useState(null);
 
     return (
+        <>
         <main className="flex h-screen bg-[#111] text-white overflow-hidden md:p-5 md:gap-5">
             <SectionPhoto className="hidden lg:flex w-1/3" />
 
@@ -51,6 +53,8 @@ function App() {
                     )}
             </section>
         </main>
+        <ChatBubble />
+        </>
     );
 }
 
